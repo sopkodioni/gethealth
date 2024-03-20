@@ -224,7 +224,7 @@
 </div>
 
 <h2 style="text-align: center">Про команду</h2>
-<b>Назва команди</b>: Jundev<br>
+<b>Назва команди</b>: Jundev<br><br>
 <div>У команді є шість ролей:
 <ul>
     <li>Team Lead - Денис Сопко</li>
