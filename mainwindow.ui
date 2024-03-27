@@ -25,7 +25,312 @@
   <property name="windowTitle">
    <string>GetHealth</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <property name="styleSheet">
+   <string notr="true">background-color: white;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="headerName">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>530</width>
+      <height>65</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>530</width>
+      <height>65</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>530</width>
+      <height>65</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myanmar Text</family>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #DDF5F4;
+color: black;
+border-bottom: 1px solid black;</string>
+    </property>
+    <property name="text">
+     <string>GetHealth</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pageTitle">
+    <property name="geometry">
+     <rect>
+      <x>85</x>
+      <y>92</y>
+      <width>359</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>359</width>
+      <height>43</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>359</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Myanmar Text</family>
+      <pointsize>36</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+</string>
+    </property>
+    <property name="text">
+     <string>Авторизація</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="loginField">
+    <property name="geometry">
+     <rect>
+      <x>37</x>
+      <y>200</y>
+      <width>465</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>465</width>
+      <height>48</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>465</width>
+      <height>48</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft JhengHei UI</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 20px;
+background-color: #F2EFEF;
+padding: 8px 18px;</string>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="passwordField">
+    <property name="geometry">
+     <rect>
+      <x>37</x>
+      <y>266</y>
+      <width>465</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>465</width>
+      <height>48</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>465</width>
+      <height>48</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft JhengHei UI</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 20px;
+background-color: #F2EFEF;
+padding: 8px 18px;</string>
+    </property>
+    <property name="maxLength">
+     <number>30</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="comeInButton">
+    <property name="geometry">
+     <rect>
+      <x>37</x>
+      <y>567</y>
+      <width>465</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>465</width>
+      <height>48</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>465</width>
+      <height>48</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft JhengHei UI</family>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius: 20px;
+background-color: #000000;
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>Увійти</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="footer">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>615</y>
+      <width>470</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>470</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>470</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft JhengHei UI</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: black;
+border-bottom: 1px solid black</string>
+    </property>
+    <property name="text">
+     <string>Немає акаунту? </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="companyName">
+    <property name="geometry">
+     <rect>
+      <x>93</x>
+      <y>653</y>
+      <width>336</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>336</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>336</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft JhengHei UI</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>©2024 Храни вас бог</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="registrationLink">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>615</y>
+      <width>241</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>241</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>241</width>
+      <height>32</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft JhengHei UI</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #0C568C;
+border-bottom: 1px solid black</string>
+    </property>
+    <property name="text">
+     <string>Реєстрація</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
