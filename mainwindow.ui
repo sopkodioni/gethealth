@@ -299,7 +299,7 @@ color: white;</string>
 border-top: 2px solid #555454;</string>
     </property>
     <property name="text">
-     <string>©2024 Храни вас Бог</string>
+     <string>©2024 Бережи вас Бог</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
