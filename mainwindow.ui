@@ -140,7 +140,7 @@ border-bottom: 1px solid black;</string>
      </font>
     </property>
     <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
+     <cursorShape>IBeamCursor</cursorShape>
     </property>
     <property name="styleSheet">
      <string notr="true">border-radius: 20px;
@@ -232,7 +232,7 @@ color: white;</string>
    <widget class="QLabel" name="footer">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>157</x>
       <y>592</y>
       <width>121</width>
       <height>20</height>
@@ -305,39 +305,22 @@ border-top: 2px solid #555454;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="registrationLink">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>595</y>
-      <width>91</width>
-      <height>16</height>
+      <x>280</x>
+      <y>592</y>
+      <width>81</width>
+      <height>21</height>
      </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>0</width>
-      <height>0</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>241</width>
-      <height>32</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <family>Microsoft JhengHei UI</family>
-      <pointsize>12</pointsize>
-     </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #0C568C;
-</string>
+     <string notr="true">font-size: 15px;
+color: #0C568C;
+border-radius: 10px;</string>
     </property>
     <property name="text">
      <string>Реєстрація</string>

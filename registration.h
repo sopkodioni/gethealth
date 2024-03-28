@@ -15,6 +15,9 @@ public:
     explicit Registration(QWidget *parent = nullptr);
     ~Registration();
 
+private slots:
+    void on_exit_clicked();
+
 private:
     Ui::Registration *ui;
 };
