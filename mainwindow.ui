@@ -271,7 +271,7 @@ color: white;</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>620</y>
+      <y>640</y>
       <width>530</width>
       <height>56</height>
      </rect>
@@ -326,16 +326,6 @@ border-radius: 10px;</string>
      <string>Реєстрація</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>530</width>
-     <height>21</height>
-    </rect>
-   </property>
   </widget>
  </widget>
  <resources/>
