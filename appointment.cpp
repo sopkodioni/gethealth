@@ -1,15 +1,15 @@
 #include "appointment.h"
 
-Appointment::Appointment(int id, string selectedDoctor, string selectedDate, string selectedTime ) : id(id), selectedDoctor(selectedDoctor), selectedDate(selectedDate), selectedTime(selectedTime) {}
-int Appointment::GetId(){
-    return id;
+Appointment::Appointment(string selectedDoctor, string selectedDate, string selectedTime ) : selectedDoctor(selectedDoctor), selectedDate(selectedDate), selectedTime(selectedTime) {}
+string Appointment::GetId(){
+    return this->id;
 }
 string Appointment::GetSelectedDoctor(){
-    return selectedDoctor;
+    return this->selectedDoctor;
 }
 string Appointment::GetSelectedDate(){
-    return selectedDate;
+    return this->selectedDate;
 }
 string Appointment::GetSelectedTime(){
-    return selectedTime;
+    return this->selectedTime;
 }

@@ -1,18 +1,19 @@
 #ifndef APPOINTMENT_H
 #define APPOINTMENT_H
 #include <string>
+#include <QUuid>
 using namespace std;
 
 class Appointment
 {
 private:
-    int id;
+    string id = QString(QUuid::createUuid().toByteArray()).toStdString();
     string selectedDoctor;
     string selectedDate;
     string selectedTime;
 public:
-    Appointment(int id, string selectedDoctor, string selectedDate, string selectedTime);
-    int GetId();
+    Appointment(string selectedDoctor, string selectedDate, string selectedTime);
+    string GetId();
     string GetSelectedDoctor();
     string GetSelectedDate();
     string GetSelectedTime();
