@@ -1,7 +1,7 @@
 #ifndef APPOINTMENT_H
 #define APPOINTMENT_H
-#include <string>
 #include <QUuid>
+#include <string>
 using namespace std;
 
 class Appointment
@@ -11,6 +11,7 @@ private:
     string selectedDoctor;
     string selectedDate;
     string selectedTime;
+
 public:
     Appointment(string selectedDoctor, string selectedDate, string selectedTime);
     string GetId();
