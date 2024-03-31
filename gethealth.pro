@@ -11,16 +11,19 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    myAppointments.cpp \
     registration.cpp \
     creationAppointment.cpp \
 
 HEADERS += \
     mainwindow.h \
+    myAppointments.h \
     registration.h \
     creationAppointment.h \
 
 FORMS += \
     mainwindow.ui \
+    myAppointments.ui \
     registration.ui \
     creationAppointment.ui \
 
@@ -28,3 +31,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Recources.qrc
