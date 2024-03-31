@@ -1,22 +1,22 @@
-#ifndef APPOINTMENT_H
-#define APPOINTMENT_H
+#ifndef CREATIONAPPOINTMENT_H
+#define CREATIONAPPOINTMENT_H
 
 #include <QDialog>
 
 namespace Ui {
-class Appointment;
+class CreationAppointment;
 }
 
-class Appointment : public QDialog
+class CreationAppointment : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit Appointment(QWidget *parent = nullptr);
-    ~Appointment();
+    explicit CreationAppointment(QWidget *parent = nullptr);
+    ~CreationAppointment();
 
 private:
-    Ui::Appointment *ui;
+    Ui::CreationAppointment *ui;
 };
 
-#endif // APPOINTMENT_H
+#endif // CREATIONAPPOINTMENT_H

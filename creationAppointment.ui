@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Appointment</class>
- <widget class="QDialog" name="Appointment">
+ <class>CreationAppointment</class>
+ <widget class="QDialog" name="CreationAppointment">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -175,7 +175,7 @@ border-radius: 20px;</string>
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/zhulik/Desktop/Group 1.svg</normaloff>C:/Users/zhulik/Desktop/Group 1.svg</iconset>
+     <normaloff>../../../Users/zhulik/Desktop/Group 1.svg</normaloff>../../../Users/zhulik/Desktop/Group 1.svg</iconset>
    </property>
    <property name="iconSize">
     <size>
