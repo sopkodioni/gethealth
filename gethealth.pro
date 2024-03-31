@@ -9,7 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    appointment.cpp \
+    _appointment.cpp \
     main.cpp \
     mainwindow.cpp \
     myAppointments.cpp \
@@ -20,7 +20,7 @@ SOURCES += \
 
 
 HEADERS += \
-    appointment.h \
+    _appointment.h \
     mainwindow.h \
     myAppointments.h \
     registration.h \
