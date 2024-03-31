@@ -13,19 +13,16 @@ SOURCES += \
     mainwindow.cpp \
     registration.cpp \
     creationAppointment.cpp \
-    testik.cpp \
 
 HEADERS += \
     mainwindow.h \
     registration.h \
     creationAppointment.h \
-    testik.h \
 
 FORMS += \
     mainwindow.ui \
     registration.ui \
     creationAppointment.ui \
-    testik.ui \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
