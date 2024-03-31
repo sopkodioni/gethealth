@@ -1,32 +1,37 @@
+/*
+    1. Берём вектор, считаем количество элементов на странице и есть ли дальше страницы
+    2. Берём информацию из вектора и переписываем в лейблы
+*/
+
 #include "myAppointments.h"
 #include "ui_myAppointments.h"
 
-myAppointments::myAppointments(QWidget *parent)
+MyAppointments::MyAppointments(QWidget *parent)
     : QDialog(parent)
-    , ui(new Ui::myAppointments)
+    , ui(new Ui::MyAppointments)
 {
     ui->setupUi(this);
 
 }
 
-myAppointments::~myAppointments()
+MyAppointments::~MyAppointments()
 {
     delete ui;
 }
 
-void myAppointments::on_delete_1_clicked()
+void MyAppointments::on_delete_1_clicked()
 {
 
 }
 
 
-void myAppointments::on_pushButton_pressed()
+void MyAppointments::on_pushButton_pressed()
 {
     QFrame *appointmentFrame = ui->appointment_1;
     appointmentFrame->setVisible(false);
 }
 
-void myAppointments::on_pushButton_2_pressed()
+void MyAppointments::on_pushButton_2_pressed()
 {
     QFrame *appointment4Frame = ui->appointment_4;
     appointment4Frame->setFixedSize(0, 0);
@@ -36,7 +41,7 @@ void myAppointments::on_pushButton_2_pressed()
 }
 
 
-void myAppointments::on_pushButton_3_pressed()
+void MyAppointments::on_pushButton_3_pressed()
 {
     QFrame *appointment4Frame = ui->appointment_4;
     appointment4Frame->setFixedSize(0, 0);
@@ -48,7 +53,7 @@ void myAppointments::on_pushButton_3_pressed()
 }
 
 
-void myAppointments::on_pushButton_4_pressed()
+void MyAppointments::on_pushButton_4_pressed()
 {
     QFrame *appointment4Frame = ui->appointment_4;
     appointment4Frame->setFixedSize(0, 0);
@@ -61,13 +66,13 @@ void myAppointments::on_pushButton_4_pressed()
     ui->appointments->setFixedHeight(ui->appointments->height() - (103 * 4));
 }
 
-void myAppointments::on_pushButton_released()
+void MyAppointments::on_pushButton_released()
 {
     QFrame *appointmentFrame = ui->appointment_1;
     appointmentFrame->setVisible(true);
 }
 
-void myAppointments::on_pushButton_2_released()
+void MyAppointments::on_pushButton_2_released()
 {
     QFrame *appointment4Frame = ui->appointment_4;
     appointment4Frame->setFixedSize(465, 80);
@@ -76,7 +81,7 @@ void myAppointments::on_pushButton_2_released()
     ui->appointments->setFixedHeight(ui->appointments->height() + (103 * 2));
 }
 
-void myAppointments::on_pushButton_3_released()
+void MyAppointments::on_pushButton_3_released()
 {
     QFrame *appointment4Frame = ui->appointment_4;
     appointment4Frame->setFixedSize(465, 80);
@@ -87,7 +92,7 @@ void myAppointments::on_pushButton_3_released()
     ui->appointments->setFixedHeight(ui->appointments->height() + (103 * 3));
 }
 
-void myAppointments::on_pushButton_4_released()
+void MyAppointments::on_pushButton_4_released()
 {
     QFrame *appointment4Frame = ui->appointment_4;
     appointment4Frame->setFixedSize(465, 80);

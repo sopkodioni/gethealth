@@ -4,16 +4,16 @@
 #include <QDialog>
 
 namespace Ui {
-class myAppointments;
+class MyAppointments;
 }
 
-class myAppointments : public QDialog
+class MyAppointments : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit myAppointments(QWidget *parent = nullptr);
-    ~myAppointments();
+    explicit MyAppointments(QWidget *parent = nullptr);
+    ~MyAppointments();
 
 private slots:
     void on_delete_1_clicked();
@@ -35,7 +35,7 @@ private slots:
     void on_pushButton_4_released();
 
 private:
-    Ui::myAppointments *ui;
+    Ui::MyAppointments *ui;
 };
 
-#endif // MYAPPOINTMENTS_H
+#endif // MyAppointments_H
