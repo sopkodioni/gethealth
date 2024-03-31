@@ -16,6 +16,8 @@ SOURCES += \
     registration.cpp \
     creationAppointment.cpp \
     appointment.cpp \
+    user.cpp \
+
 
 HEADERS += \
     appointment.h \
@@ -24,6 +26,7 @@ HEADERS += \
     registration.h \
     creationAppointment.h \
     appointment.h \
+    user.h \
 
 FORMS += \
     mainwindow.ui \
@@ -31,10 +34,12 @@ FORMS += \
     registration.ui \
     creationAppointment.ui \
 
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    Recources.qrc
+    Recources.qrc \
+    users.json

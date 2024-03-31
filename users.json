@@ -1,0 +1,20 @@
+[
+  {
+    "id": "12312",
+    "name": "Vlad",
+    "surname": "Filippov",
+    "patronymic": "Volodimirovich",
+    "dateOfBirthday": "02.10.2004",
+    "gender": "male",
+    "phoneNumber": "0969231883",
+    "password": "f02102004",
+    "appointment":
+    [
+      {
+        "selectedDoctor": "Melnik D.I. (Neuropathologist)",
+        "selectedDate": "21.03",
+        "selectedTime": "15:00"
+      }
+    ]
+  }
+]
