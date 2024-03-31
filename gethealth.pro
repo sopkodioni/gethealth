@@ -16,6 +16,7 @@ SOURCES += \
     registration.cpp \
     creationAppointment.cpp \
     appointment.cpp \
+
 HEADERS += \
     appointment.h \
     mainwindow.h \
@@ -23,6 +24,7 @@ HEADERS += \
     registration.h \
     creationAppointment.h \
     appointment.h \
+
 FORMS += \
     mainwindow.ui \
     myAppointments.ui \
