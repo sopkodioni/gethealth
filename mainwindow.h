@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QLineEdit>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,6 +17,12 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    void setLineEditErrorStyle(QLineEdit *lineEdit);
+    void checkAuthorization(const QString &phoneNumber,
+                            const QString &password,
+                            QLineEdit *loginField,
+                            QLineEdit *passwordField);
 
 private slots:
     void on_pushButton_clicked();
