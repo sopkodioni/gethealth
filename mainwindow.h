@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QLineEdit>
 
+#include <QFile>
+
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -18,12 +21,15 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void setLineEditErrorStyle(QLineEdit *lineEdit);
     void checkAuthorization(const QString &phoneNumber,
-                            const QString &password,
-                            QLineEdit *loginField,
-                            QLineEdit *passwordField);
+                            const QString &password);
 
+    bool isPhoneNumberValid(const QString &phoneNumber);
+
+    bool isEmptyField(const QString &text);
+
+    void clearFieldHighlight(QLineEdit *lineEdit);
+    void setLineEditErrorStyle(QLineEdit *lineEdit);
 private slots:
     void on_pushButton_clicked();
 
