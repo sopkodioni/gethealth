@@ -3,13 +3,13 @@
 
 #include "registration.h"
 
-#include <QRegularExpression>
-#include <QIntValidator>
 #include <QFile>
+#include <QIntValidator>
+#include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include <QJsonArray>
-#include <QtWidgets>
+#include <QRegularExpression>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -19,8 +19,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->loginField->setPlaceholderText("Логін (номер телефону з '0')");
     ui->passwordField->setPlaceholderText("Пароль");
-    QString phoneRegex = "^\\d{10}$";
-    ui->loginField->setValidator(new QRegularExpressionValidator(QRegularExpression(phoneRegex), this));
+    QString phoneRegex = "^0\\d{9}$";
+    ui->loginField->setValidator(
+        new QRegularExpressionValidator(QRegularExpression(phoneRegex), this));
     ui->passwordField->setEchoMode(QLineEdit::Password);
 }
 
@@ -36,29 +37,36 @@ void MainWindow::on_pushButton_clicked()
     windowRegistration.exec();
 }
 
-void setLineEditErrorStyle(QLineEdit* lineEdit) {
-    lineEdit->setStyleSheet("border: 1px solid red;");
+void MainWindow::setLineEditErrorStyle(QLineEdit *lineEdit)
+{
+    lineEdit->setStyleSheet("border: 1px solid red;"
+                            "border-radius: 20px;"
+                            "background-color:#F2EFEF;"
+                            "padding: 8px 18px;");
 }
 
 // Функция для проверки авторизации пользователя
-void checkAuthorization(const QString& phoneNumber, const QString& password, QLineEdit* loginField, QLineEdit* passwordField)
+void MainWindow::checkAuthorization(const QString &phoneNumber,
+                        const QString &password,
+                        QLineEdit *loginField,
+                        QLineEdit *passwordField)
 {
-    // Загрузка JSON-файла с данными пользователей
-    QFile fileWhithUsers("users.json");
-    if (!fileWhithUsers.open(QIODevice::ReadOnly))
-    {
+
+    QString jsonFilePath= "users.json";
+    QFile fileWhithUsers(jsonFilePath);
+    if (!fileWhithUsers.open(QIODevice::ReadOnly)) {
         QMessageBox::critical(nullptr, "Error", "Системна помилка");
         return;
     }
-    // Чтение JSON-документа из файла
+
     QByteArray jsonData = fileWhithUsers.readAll();
     fileWhithUsers.close();
 
-    // Преобразование JSON-документа в объект
+
     QJsonDocument doc = QJsonDocument::fromJson(jsonData);
     QJsonObject jsonObject = doc.object();
 
-    // Поиск пользователя по номеру телефона
+
     if (jsonObject.contains(phoneNumber)) {
         QJsonObject user = jsonObject.value(phoneNumber).toObject();
         if (user.value("password").toString() == password) {
