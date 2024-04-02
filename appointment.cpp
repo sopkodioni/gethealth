@@ -1,10 +1,6 @@
-#include "_appointment.h"
+#include "appointment.h"
 
-Appointment::Appointment(
-    string selectedDoctor,
-    string selectedDate,
-    string selectedTime
-    )
+Appointment::Appointment(string selectedDoctor, string selectedDate, string selectedTime)
 {
     this->selectedDoctor = selectedDoctor;
     this->selectedDate = selectedDate;
