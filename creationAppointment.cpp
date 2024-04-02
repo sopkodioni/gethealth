@@ -6,8 +6,6 @@ CreationAppointment::CreationAppointment(QWidget *parent)
     , ui(new Ui::CreationAppointment)
 {
     ui->setupUi(this);
-    ui->date->setPlaceholderText("Дата прийому");
-    ui->time->setPlaceholderText("Час прийому");
 }
 
 CreationAppointment::~CreationAppointment()
