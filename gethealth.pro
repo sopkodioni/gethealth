@@ -18,7 +18,7 @@ SOURCES += \
     creationAppointment.cpp \
     user.cpp \
     usersdata.cpp \
-    personalaccount.cpp \
+
 
 
 HEADERS += \
@@ -30,7 +30,7 @@ HEADERS += \
     creationAppointment.h \
     user.h \
     usersdata.h \
-    personalaccount.h \
+
 
 FORMS += \
     mainwindow.ui \
@@ -38,7 +38,7 @@ FORMS += \
     personalaccount.ui \
     registration.ui \
     creationAppointment.ui \
-    personalaccount.ui \
+
 
 
 # Default rules for deployment.
