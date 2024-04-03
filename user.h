@@ -14,7 +14,7 @@ private:
     string name;
     string surname;
     string patronymic;
-    string dateOfBirth;
+    QString dateOfBirth;
     string numberPhone;
     string password;
     string gender;
@@ -26,7 +26,7 @@ public:
         string name,
         string surname,
         string patronymic,
-        string dateOfBirth,
+        QString dateOfBirth,
         string numberPhone,
         string password,
         string gender
@@ -39,8 +39,8 @@ public:
     void SetSurname(string surname);
     string GetPatronymic();
     void SetPatronymic(string patronymic);
-    string GetDateOfBirth();
-    void SetDateOfBirth(string dateOfBirth);
+    QString GetDateOfBirth();
+    void SetDateOfBirth(QString dateOfBirth);
     string GetNumberPhone();
     void SetNumberPhone(string numberPhone);
     string GetPassword();

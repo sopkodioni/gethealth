@@ -1,12 +1,13 @@
 #include "user.h"
 #include <QDebug>
+#include <QString>
 
 User::User
 (
     string name,
     string surname,
     string patronymic,
-    string dateOfBirth,
+    QString dateOfBirth,
     string numberPhone,
     string password,
     string gender
@@ -21,7 +22,7 @@ User::User
     this->appointments = vector<Appointment>();
 }
 
-string User::GetId(){
+string User::GetId() {
     return this->id;
 }
 
@@ -49,11 +50,11 @@ void User::SetPatronymic(string patronymic){
     this->patronymic = patronymic;
 }
 
-string User::GetDateOfBirth(){
+QString User::GetDateOfBirth(){
     return this->dateOfBirth;
 }
 
-void User::SetDateOfBirth(string dateOfBirth){
+void User::SetDateOfBirth(QString dateOfBirth){
     this->dateOfBirth = dateOfBirth;
 }
 
