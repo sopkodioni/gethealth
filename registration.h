@@ -2,6 +2,8 @@
 #define REGISTRATION_H
 
 #include <QDialog>
+#include <string>
+#include "usersdata.h"
 
 namespace Ui {
 class Registration;
@@ -19,6 +21,7 @@ public:
     bool isEmptyForm();
     bool isValidNumberPhone();
     bool isValidPassword();
+    bool isUserExists(UsersData &userData, string &inputNumberPhone);
 
 
 private slots:

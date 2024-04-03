@@ -45,6 +45,19 @@ void Registration::on_exit_clicked()
     }
 }
 
+bool Registration::isUserExists(UsersData &userData, string &inputNumberPhone){
+    foreach (const QJsonValue &value, userData.getArrayUsersData()) {
+        QJsonObject user = value.toObject();
+        QString userPhoneNumber = user.value("phoneNumber").toString();
+        if (userPhoneNumber.toStdString() == inputNumberPhone) {
+            QMessageBox::critical(nullptr, "Error", "Користувач за таким номером все інсує");
+            return true;
+        }
+    }
+
+    return false;
+}
+
 bool Registration::UserRegistration(){
     if(!this->isValidForm()){
         return false;
@@ -53,13 +66,8 @@ bool Registration::UserRegistration(){
     UsersData userData;
     string inputNumberPhone = ui->userNumberPhone->text().toStdString();
 
-    foreach (const QJsonValue &value, userData.getArrayUsersData()) {
-        QJsonObject user = value.toObject();
-        QString userPhoneNumber = user.value("phoneNumber").toString();
-        if (userPhoneNumber.toStdString() == inputNumberPhone) {
-            QMessageBox::critical(nullptr, "Error", "Користувач за таким номером все інсує");
-            return false;
-        }
+    if(this->isUserExists(userData, inputNumberPhone)){
+        return false;
     }
 
     string inputName = ui->userName->text().toStdString();
