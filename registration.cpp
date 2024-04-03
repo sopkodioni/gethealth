@@ -20,7 +20,7 @@ Registration::Registration(QWidget *parent)
     ui->userName->setPlaceholderText("Ім'я");
     ui->userSurname->setPlaceholderText("Прізвище");
     ui->userPatronymic->setPlaceholderText("Побатькові");
-    ui->userNumberPhone->setPlaceholderText("Номер телефону");
+    ui->userNumberPhone->setPlaceholderText("Номер телефону (ex: 098XXXXXXX)");
     ui->userGender->setPlaceholderText("Стать");
     ui->userPassword->setPlaceholderText("Пароль");
     ui->userGender->addItems(genders);
@@ -45,17 +45,9 @@ void Registration::on_exit_clicked()
     }
 }
 
-bool Registration::isUserExists(UsersData &userData, string &inputNumberPhone){
-    foreach (const QJsonValue &value, userData.getArrayUsersData()) {
-        QJsonObject user = value.toObject();
-        QString userPhoneNumber = user.value("phoneNumber").toString();
-        if (userPhoneNumber.toStdString() == inputNumberPhone) {
-            QMessageBox::critical(nullptr, "Error", "Користувач за таким номером все інсує");
-            return true;
-        }
-    }
-
-    return false;
+void Registration::on_sendRegistr_clicked()
+{
+    this->UserRegistration();
 }
 
 bool Registration::UserRegistration(){
@@ -84,6 +76,19 @@ bool Registration::UserRegistration(){
     close();
 
     return true;
+}
+
+bool Registration::isUserExists(UsersData &userData, string &inputNumberPhone){
+    foreach (const QJsonValue &value, userData.getArrayUsersData()) {
+        QJsonObject user = value.toObject();
+        QString userPhoneNumber = user.value("phoneNumber").toString();
+        if (userPhoneNumber.toStdString() == inputNumberPhone) {
+            QMessageBox::critical(nullptr, "Error", "Користувач за таким номером все інсує");
+            return true;
+        }
+    }
+
+    return false;
 }
 
 bool Registration::isValidForm(){
@@ -134,8 +139,5 @@ bool Registration::isValidPassword(){
 }
 
 
-void Registration::on_sendRegistr_clicked()
-{
-    this->UserRegistration();
-}
+
 
