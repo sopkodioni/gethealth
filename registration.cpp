@@ -1,5 +1,5 @@
-#include <QStringList>
 #include "registration.h"
+#include <QStringList>
 #include "ui_registration.h"
 
 #include "mainwindow.h"
@@ -10,7 +10,8 @@ Registration::Registration(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QStringList genders = (QStringList() << "Чоловіча" << "Жіноча");
+    QStringList genders = (QStringList() << "Чоловіча"
+                                         << "Жіноча");
 
     ui->userName->setPlaceholderText("Ім'я");
     ui->userSurname->setPlaceholderText("Прізвище");
@@ -30,16 +31,12 @@ Registration::~Registration()
     delete ui;
 }
 
-
 void Registration::on_exit_clicked()
 {
     close();
 
-    // Получаем указатель на главное окно
-    MainWindow *mainWindow = qobject_cast<MainWindow*>(parent());
+    MainWindow *mainWindow = qobject_cast<MainWindow *>(parent());
     if (mainWindow) {
-        // Показываем снова главное окно
         mainWindow->show();
     }
 }
-
