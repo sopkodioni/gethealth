@@ -14,9 +14,17 @@ class Registration : public QDialog
 public:
     explicit Registration(QWidget *parent = nullptr);
     ~Registration();
+    bool UserRegistration();
+    bool isValidForm();
+    bool isEmptyForm();
+    bool isValidNumberPhone();
+    bool isValidPassword();
+
 
 private slots:
     void on_exit_clicked();
+
+    void on_sendRegistr_clicked();
 
 private:
     Ui::Registration *ui;
