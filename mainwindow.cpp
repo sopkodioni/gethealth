@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+    UsersData::ResetUser();
     delete ui;
 }
 
