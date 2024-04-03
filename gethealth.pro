@@ -16,6 +16,7 @@ SOURCES += \
     registration.cpp \
     creationAppointment.cpp \
     user.cpp \
+    usersdata.cpp \
 
 
 HEADERS += \
@@ -25,6 +26,7 @@ HEADERS += \
     registration.h \
     creationAppointment.h \
     user.h \
+    usersdata.h \
 
 FORMS += \
     mainwindow.ui \
