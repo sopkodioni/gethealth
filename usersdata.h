@@ -4,8 +4,9 @@
 #include <QJsonArray>
 #include <QJsonValue>
 #include <QJsonObject>
+#include <QJsonDocument>
 
-#include "appointment.h"
+#include "user.h"
 
 using namespace std;
 
@@ -13,10 +14,12 @@ class UsersData
 {
 private:
     QJsonArray arrayUsersData;
+    QJsonDocument usersJsonDoc;
 public:
     UsersData();
-    QJsonArray getArrayUsersData();
-    void addUser(Appointment user);
+    QJsonArray& getArrayUsersData();
+    void setArrayUsersData();
+    void addUser(User &user);
 };
 
 #endif // USERSDATA_H
