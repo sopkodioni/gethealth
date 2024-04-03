@@ -2,6 +2,7 @@
 #define MYAPPOINTMENTS_H
 
 #include <QDialog>
+#include "usersdata.h"
 
 namespace Ui {
 class MyAppointments;
