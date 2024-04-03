@@ -3,12 +3,11 @@
 
 #include <QDialog>
 #include <QFile>
-#include <QJsonDocument>
 #include <QJsonArray>
+#include <QJsonDocument>
 #include <QJsonValue>
 
 using namespace std;
-
 
 namespace Ui {
 class CreationAppointment;
@@ -23,6 +22,11 @@ public:
     ~CreationAppointment();
 
     QJsonArray getDoctors();
+
+private slots:
+    void on_ButtonAppoint_clicked();
+
+    void on_ButtonBack_clicked();
 
 private:
     Ui::CreationAppointment *ui;
