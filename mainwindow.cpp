@@ -42,22 +42,24 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::checkAuthorization(const QString &phoneNumber, const QString &password)
 {
     QString jsonFilePath = "users.json";
-    QFile fileWhithUsers(jsonFilePath);
-    if (!fileWhithUsers.open(QIODevice::ReadOnly)) {
+    QFile fileWithUsers(jsonFilePath);
+    if (!fileWithUsers.open(QIODevice::ReadOnly)) {
         QMessageBox::critical(nullptr, "Error", "Системна помилка");
         return;
     }
 
-    QByteArray jsonData = fileWhithUsers.readAll();
-    fileWhithUsers.close();
+    QByteArray jsonData = fileWithUsers.readAll();
+    fileWithUsers.close();
 
     QJsonDocument doc = QJsonDocument::fromJson(jsonData);
-    QJsonObject jsonObject = doc.object();
+    QJsonArray jsonArray = doc.array();
 
-    for (auto it = jsonObject.begin(); it != jsonObject.end(); ++it) {
-        QJsonObject user = it.value().toObject();
-        if (user.value("phoneNumber").toString() == phoneNumber) {
-            if (user.value("password").toString() == password) {
+    foreach (const QJsonValue &value, jsonArray) {
+        QJsonObject user = value.toObject();
+        QString userPhoneNumber = user.value("phoneNumber").toString().trimmed();
+        QString userPassword = user.value("password").toString().trimmed();
+        if (userPhoneNumber == phoneNumber.trimmed()) {
+            if (userPassword == password.trimmed()) {
                 qDebug() << "Авторизация успешна!";
                 return;
             } else {
@@ -67,7 +69,6 @@ void MainWindow::checkAuthorization(const QString &phoneNumber, const QString &p
         }
     }
 
-    // Если пользователь не найден
     QMessageBox::critical(nullptr, "Error", "Такого користувача немає");
 }
 
