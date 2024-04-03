@@ -50,20 +50,9 @@ void MainWindow::openPersonalAccount()
 
 void MainWindow::checkAuthorization(const QString &phoneNumber, const QString &password)
 {
-    QString jsonFilePath = "users.json";
-    QFile fileWithUsers(jsonFilePath);
-    if (!fileWithUsers.open(QIODevice::ReadOnly)) {
-        QMessageBox::critical(nullptr, "Error", "Системна помилка");
-        return;
-    }
+    UsersData usersData;
 
-    QByteArray jsonData = fileWithUsers.readAll();
-    fileWithUsers.close();
-
-    QJsonDocument doc = QJsonDocument::fromJson(jsonData);
-    QJsonArray jsonArray = doc.array();
-
-    foreach (const QJsonValue &value, jsonArray) {
+    foreach (const QJsonValue &value, usersData.getArrayUsersData()) {
         QJsonObject user = value.toObject();
         QString userPhoneNumber = user.value("phoneNumber").toString().trimmed();
         QString userPassword = user.value("password").toString().trimmed();
