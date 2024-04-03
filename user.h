@@ -1,9 +1,9 @@
 #ifndef USER_H
 #define USER_H
-#include <QUuid>
 #include <appointment.h>
 #include <string>
 #include <vector>
+#include <QUuid>
 
 using namespace std;
 
@@ -21,13 +21,16 @@ private:
     vector<Appointment> appointments;
 
 public:
-    User(string name,
-         string surname,
-         string patronymic,
-         string dateOfBirth,
-         string numberPhone,
-         string password,
-         string gender);
+    User
+    (
+        string name,
+        string surname,
+        string patronymic,
+        string dateOfBirth,
+        string numberPhone,
+        string password,
+        string gender
+    );
 
     string GetId();
     string GetName();
@@ -44,6 +47,7 @@ public:
     void SetPassword(string password);
     string GetGender();
     void SetGender(string gender);
+    void newAppointment(Appointment appointment);
     vector<Appointment> GetAppointments();
 };
 

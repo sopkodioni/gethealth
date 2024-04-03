@@ -81,6 +81,10 @@ void User::SetGender(string gender){
     this->gender = gender;
 }
 
+void User::newAppointment(Appointment appointment){
+    this->appointments.push_back(appointment);
+}
+
 vector<Appointment> User::GetAppointments(){
     return this->appointments;
 }
