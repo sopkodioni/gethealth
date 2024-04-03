@@ -2,5 +2,8 @@
     <qresource prefix="/recources">
         <file>img/trash.png</file>
         <file>img/BurgerMenuIcon.svg</file>
+        <file>img/edit.png</file>
+        <file>img/exit.png</file>
+        <file>img/menu.png</file>
     </qresource>
 </RCC>

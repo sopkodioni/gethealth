@@ -111,25 +111,45 @@ border-bottom: 1px solid black;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="editButton">
    <property name="geometry">
     <rect>
-     <x>370</x>
-     <y>530</y>
-     <width>81</width>
-     <height>21</height>
+     <x>330</x>
+     <y>520</y>
+     <width>161</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <bold>false</bold>
+    </font>
    </property>
    <property name="cursor">
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
    <property name="styleSheet">
-    <string notr="true">font-size: 15px;
-color: rgb(0, 0, 0);
-border-radius: 10px;</string>
+    <string notr="true">background-color: rgb(255, 255, 255, 0);
+background-repeat: no-repeat;
+border: none;
+color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
-    <string>Редагувати</string>
+    <string>Редагувати </string>
+   </property>
+   <property name="icon">
+    <iconset resource="Recources.qrc">
+     <normaloff>:/recources/img/edit.png</normaloff>:/recources/img/edit.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>35</width>
+     <height>35</height>
+    </size>
    </property>
   </widget>
   <widget class="QLabel" name="companyName">
@@ -290,7 +310,89 @@ padding: 8px 18px;</string>
     <string>Номер телефону</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="menuButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255, 0);
+background-repeat: no-repeat;
+border: none;
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="Recources.qrc">
+     <normaloff>:/recources/img/BurgerMenuIcon.svg</normaloff>:/recources/img/BurgerMenuIcon.svg</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>38</width>
+     <height>38</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exitButton">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>10</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255, 0);
+background-repeat: no-repeat;
+border: none;
+color: rgb(0, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="Recources.qrc">
+     <normaloff>:/recources/img/exit.png</normaloff>:/recources/img/exit.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>35</width>
+     <height>35</height>
+    </size>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="Recources.qrc"/>
+ </resources>
  <connections/>
 </ui>
