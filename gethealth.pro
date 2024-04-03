@@ -13,26 +13,32 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     myAppointments.cpp \
+    personalaccount.cpp \
     registration.cpp \
     creationAppointment.cpp \
     user.cpp \
     usersdata.cpp \
+    personalaccount.cpp \
 
 
 HEADERS += \
     appointment.h \
     mainwindow.h \
     myAppointments.h \
+    personalaccount.h \
     registration.h \
     creationAppointment.h \
     user.h \
     usersdata.h \
+    personalaccount.h \
 
 FORMS += \
     mainwindow.ui \
     myAppointments.ui \
+    personalaccount.ui \
     registration.ui \
     creationAppointment.ui \
+    personalaccount.ui \
 
 
 # Default rules for deployment.
