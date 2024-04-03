@@ -9,8 +9,8 @@
 #include <QJsonObject>
 
 #include <QIntValidator>
-#include <QRegularExpression>
 #include <QMessageBox>
+#include <QRegularExpression>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -23,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     QString phoneRegex = "^0\\d{9}$";
     ui->loginField->setValidator(
         new QRegularExpressionValidator(QRegularExpression(phoneRegex), this));
+    ui->loginField->setToolTip("Введіть ваш номер телефону, обов'язково починаючи з 0");
     ui->passwordField->setEchoMode(QLineEdit::Password);
 }
 
@@ -38,10 +39,9 @@ void MainWindow::on_pushButton_clicked()
     windowRegistration.exec();
 }
 
-void MainWindow::checkAuthorization(const QString &phoneNumber,
-                                    const QString &password)
+void MainWindow::checkAuthorization(const QString &phoneNumber, const QString &password)
 {
-    QString jsonFilePath= "users.json";
+    QString jsonFilePath = "users.json";
     QFile fileWhithUsers(jsonFilePath);
     if (!fileWhithUsers.open(QIODevice::ReadOnly)) {
         QMessageBox::critical(nullptr, "Error", "Системна помилка");
@@ -127,3 +127,4 @@ void MainWindow::on_comeInButton_clicked()
 
     checkAuthorization(phoneNumber, password);
 }
+
