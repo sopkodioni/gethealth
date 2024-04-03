@@ -94,7 +94,7 @@ color: #000;
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="userSurname">
+  <widget class="QLineEdit" name="userPatronymic">
    <property name="enabled">
     <bool>true</bool>
    </property>
@@ -128,7 +128,7 @@ border-radius: 24px;</string>
     <number>20</number>
    </property>
   </widget>
-  <widget class="QLineEdit" name="userPatronymic">
+  <widget class="QLineEdit" name="userSurname">
    <property name="enabled">
     <bool>true</bool>
    </property>
