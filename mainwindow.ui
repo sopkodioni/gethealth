@@ -194,7 +194,7 @@ padding: 8px 18px;</string>
     <property name="geometry">
      <rect>
       <x>33</x>
-      <y>530</y>
+      <y>567</y>
       <width>465</width>
       <height>48</height>
      </rect>
@@ -233,7 +233,7 @@ color: white;</string>
     <property name="geometry">
      <rect>
       <x>157</x>
-      <y>592</y>
+      <y>620</y>
       <width>121</width>
       <height>20</height>
      </rect>
@@ -271,9 +271,9 @@ color: white;</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>640</y>
+      <y>650</y>
       <width>530</width>
-      <height>56</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -309,7 +309,7 @@ border-top: 2px solid #555454;</string>
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>592</y>
+      <y>620</y>
       <width>81</width>
       <height>21</height>
      </rect>
