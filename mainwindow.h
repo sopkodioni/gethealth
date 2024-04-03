@@ -1,11 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
 #include <QLineEdit>
+#include <QMainWindow>
 
 #include <QFile>
-
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -21,8 +20,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void checkAuthorization(const QString &phoneNumber,
-                            const QString &password);
+    void checkAuthorization(const QString &phoneNumber, const QString &password);
 
     bool isPhoneNumberValid(const QString &phoneNumber);
 
@@ -35,6 +33,7 @@ private slots:
 
     void on_comeInButton_clicked();
 
+    void openPersonalAccount();
 private:
     Ui::MainWindow *ui;
 };
