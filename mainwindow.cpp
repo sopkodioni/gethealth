@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include "registration.h"
+#include "personalaccount.h"
 
 #include <QFile>
 #include <QJsonArray>
@@ -39,6 +40,14 @@ void MainWindow::on_pushButton_clicked()
     windowRegistration.exec();
 }
 
+void MainWindow::openPersonalAccount()
+{
+    close();
+    personalAccount personalAccountWindow;
+    personalAccountWindow.exec();
+
+}
+
 void MainWindow::checkAuthorization(const QString &phoneNumber, const QString &password)
 {
     QString jsonFilePath = "users.json";
@@ -60,7 +69,7 @@ void MainWindow::checkAuthorization(const QString &phoneNumber, const QString &p
         QString userPassword = user.value("password").toString().trimmed();
         if (userPhoneNumber == phoneNumber.trimmed()) {
             if (userPassword == password.trimmed()) {
-                qDebug() << "Авторизация успешна!";
+                openPersonalAccount();
                 return;
             } else {
                 QMessageBox::critical(nullptr, "Error", "Невірний пароль");
@@ -128,4 +137,3 @@ void MainWindow::on_comeInButton_clicked()
 
     checkAuthorization(phoneNumber, password);
 }
-
