@@ -20,6 +20,7 @@ public:
     QJsonArray& getArrayUsersData();
     void setArrayUsersData();
     void addUser(User &user);
+    static void ResetUser();
 };
 
 #endif // USERSDATA_H
