@@ -2,6 +2,13 @@
 #define CREATIONAPPOINTMENT_H
 
 #include <QDialog>
+#include <QFile>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QJsonValue>
+
+using namespace std;
+
 
 namespace Ui {
 class CreationAppointment;
@@ -14,6 +21,8 @@ class CreationAppointment : public QDialog
 public:
     explicit CreationAppointment(QWidget *parent = nullptr);
     ~CreationAppointment();
+
+    QJsonArray getDoctors();
 
 private:
     Ui::CreationAppointment *ui;

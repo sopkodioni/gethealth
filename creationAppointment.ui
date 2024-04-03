@@ -93,28 +93,43 @@ border-bottom: 2px solid #555454;</string>
    <property name="font">
     <font>
      <family>Myanmar Text</family>
-     <pointsize>22</pointsize>
+     <pointsize>16</pointsize>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(0, 0, 0);
 border-top: 2px solid black;</string>
    </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="lineWidth">
+    <number>1</number>
+   </property>
    <property name="text">
-    <string>©2024 Храни вас бог</string>
+    <string>©2024 Бережи вас бог</string>
    </property>
    <property name="textFormat">
     <enum>Qt::RichText</enum>
    </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+   <property name="indent">
+    <number>-1</number>
    </property>
   </widget>
   <widget class="QPushButton" name="ButtonBack">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>560</y>
+     <y>570</y>
      <width>170</width>
      <height>48</height>
     </rect>
@@ -122,8 +137,11 @@ border-top: 2px solid black;</string>
    <property name="font">
     <font>
      <family>Microsoft JhengHei UI</family>
-     <pointsize>24</pointsize>
+     <pointsize>18</pointsize>
     </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background: rgb(191, 16, 16);
@@ -138,7 +156,7 @@ border-radius: 20px;</string>
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>560</y>
+     <y>570</y>
      <width>282</width>
      <height>48</height>
     </rect>
@@ -146,8 +164,11 @@ border-radius: 20px;</string>
    <property name="font">
     <font>
      <family>Microsoft JhengHei UI</family>
-     <pointsize>24</pointsize>
+     <pointsize>18</pointsize>
     </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background: #2B954F;
@@ -158,33 +179,7 @@ border-radius: 20px;</string>
     <string>Записатись</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="ButtonBurger">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>32</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgba(0, 0, 0, 0);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="icon">
-    <iconset resource="Recources.qrc">
-     <normaloff>:/recources/img/BurgerMenuIcon.svg</normaloff>:/recources/img/BurgerMenuIcon.svg</iconset>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>32</width>
-     <height>32</height>
-    </size>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="doctorsList">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -198,6 +193,9 @@ border-radius: 20px;</string>
      <family>Microsoft JhengHei UI</family>
      <pointsize>18</pointsize>
     </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -216,21 +214,6 @@ padding-left: 20px;</string>
    <property name="frame">
     <bool>true</bool>
    </property>
-   <item>
-    <property name="text">
-     <string>Антон Войченко</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Кирил Кухта</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Влад Филипов</string>
-    </property>
-   </item>
   </widget>
   <widget class="QDateEdit" name="date">
    <property name="geometry">
@@ -289,8 +272,6 @@ padding-left: 20px</string>
    </property>
   </widget>
  </widget>
- <resources>
-  <include location="Recources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
