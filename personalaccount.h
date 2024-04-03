@@ -15,6 +15,9 @@ public:
     explicit personalAccount(QWidget *parent = nullptr);
     ~personalAccount();
 
+private slots:
+    void on_exitButton_clicked();
+
 private:
     Ui::personalAccount *ui;
 };

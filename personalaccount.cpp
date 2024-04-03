@@ -14,3 +14,9 @@ personalAccount::~personalAccount()
 {
     delete ui;
 }
+
+void personalAccount::on_exitButton_clicked()
+{
+    QApplication::quit();
+}
+
