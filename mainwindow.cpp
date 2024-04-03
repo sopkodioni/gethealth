@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    ui->loginField->setPlaceholderText("Логін (ex: 098xxxxxxx)");
+    ui->loginField->setPlaceholderText("Логін (ex: 098XXXXXXX)");
     ui->passwordField->setPlaceholderText("Пароль");
     QString phoneRegex = "^0\\d{9}$";
     ui->loginField->setValidator(
