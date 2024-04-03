@@ -25,6 +25,7 @@ public:
     bool isPhoneNumberValid(const QString &phoneNumber);
 
     bool isEmptyField(const QString &text);
+    void markCurrentUser(QJsonArray arrayUsersData, QJsonDocument jsonDocument, QJsonObject user, int index);
 
     void clearFieldHighlight(QLineEdit *lineEdit);
     void setLineEditErrorStyle(QLineEdit *lineEdit);

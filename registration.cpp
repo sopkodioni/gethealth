@@ -69,7 +69,7 @@ bool Registration::UserRegistration(){
     string inputPassword = ui->userPassword->text().toStdString();
     string selectedGender = ui->userGender->currentText().toStdString();
 
-    User newUser(inputName, inputSurname, inputPatronymic, inputDateOfBirthday, inputNumberPhone, inputPassword, selectedGender);
+    User newUser(inputName, inputSurname, inputPatronymic, inputDateOfBirthday, inputNumberPhone, inputPassword, selectedGender = "не вибрано");
     userData.addUser(newUser);
 
     QMessageBox::information(nullptr, "Успіх!", "Вас зареєстровано!");

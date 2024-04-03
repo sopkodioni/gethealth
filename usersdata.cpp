@@ -6,6 +6,7 @@
 #include <QJsonObject>
 #include <QJsonValue>
 #include <QDebug>
+#include <QJsonParseError>
 
 UsersData::UsersData() {
     this->setArrayUsersData();
@@ -56,6 +57,36 @@ void UsersData::addUser(User &user) {
         return;
     }
 
+    jsonUsers.write(jsonDocument.toJson());
+    jsonUsers.close();
+}
+
+void UsersData::ResetUser(){
+    QFile jsonUsers("users.json");
+    if (!jsonUsers.open(QIODevice::ReadOnly)){
+        qWarning("Couldn't open file.");
+    }
+    QByteArray usersData = jsonUsers.readAll();
+    jsonUsers.close();
+    QJsonDocument jsonDocument = QJsonDocument::fromJson(usersData);
+
+    QJsonArray users = jsonDocument.array();
+
+    for(int i = 0; i < users.size(); i++){
+        QJsonObject user = users[i].toObject();
+
+        if(user.contains("current")){
+            user.remove("current");
+            users[i] = user;
+        }
+    }
+
+    if (!jsonUsers.open(QIODevice::WriteOnly)) {
+        qDebug() << "Failed to open output file";
+        return;
+    }
+
+    jsonDocument.setArray(users);
     jsonUsers.write(jsonDocument.toJson());
     jsonUsers.close();
 }
