@@ -1,6 +1,8 @@
 #include "personalaccount.h"
 #include "ui_personalaccount.h"
 
+#include "mainwindow.h"
+
 personalAccount::personalAccount(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::personalAccount)
